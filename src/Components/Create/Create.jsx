@@ -31,21 +31,21 @@ const Create = () => {
   const handlesubmit = async () => {
     if (!validateInputs()) return;
     setIsLoading(true);
-    try {
+    try { 
       const formData = new FormData();
       formData.append('file', img);
-      formData.append('upload_preset', 'cloudinary');
-      formData.append('cloud_name', 'dxgm5ijlb');
+      formData.append('upload_preset', 'olximage');
+      formData.append('cloud_name', 'dxjwh0e2h');
 
-      const res = await axios.post('https://api.cloudinary.com/v1_1/dxgm5ijlb/image/upload', formData);
+      const res = await axios.post('https://api.cloudinary.com/v1_1/dxjwh0e2h/image/upload', formData);
       const imageUrl = res.data.secure_url;
       console.log(imageUrl);
       console.log(user.uid);
       const db = getFirestore()
       addDoc(collection(db, 'products'), {
         product: name,
-        category,
-        price,
+        category,    
+        price, 
         url: imageUrl,
         userId: user.uid,
         createAt: date.toDateString(),

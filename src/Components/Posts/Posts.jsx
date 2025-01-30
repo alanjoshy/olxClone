@@ -7,7 +7,10 @@ import Heart from "../../assets/Heart";
 import "./Post.css";
 
 const ProductCard = ({ product, onClick }) => (
+  
   <div className="card" onClick={() => onClick(product)}>
+    {console.log('product>',product)
+    }
     <div className="favorite">
       <Heart />
     </div>
@@ -30,6 +33,8 @@ function Posts() {
   const [loading, setLoading] = useState(true);
   const { setPostdetails } = useContext(PostContext);
   const navigate = useNavigate();
+  console.log('pro>>>',products);
+  
 
   const fetchProducts = async () => {
     try {
@@ -56,6 +61,8 @@ function Posts() {
     const loadProducts = async () => {
       try {
         const fetchedProducts = await fetchProducts();
+        console.log('fetchedProducts>>>',fetchedProducts);
+        
         setProducts(fetchedProducts || []);
       } catch (error) {
         console.error(error);
