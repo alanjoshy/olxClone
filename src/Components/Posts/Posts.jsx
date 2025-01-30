@@ -12,7 +12,7 @@ const ProductCard = ({ product, onClick }) => (
     {console.log('product>',product)
     }
     <div className="favorite">
-      <Heart />
+      <Heart /> 
     </div>
     <div className="image">
       <img src={product.url} alt={product.product} />
