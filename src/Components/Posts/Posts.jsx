@@ -22,8 +22,8 @@ const ProductCard = ({ product, onClick }) => (
       <span className="kilometer">{product.category}</span>
       <p className="name">{product.product}</p>
     </div>
-    <div className="date">
-      <span>{new Date(product.createAt).toLocaleDateString()}</span>
+    <div className="date">   
+      <span>{new Date(product.createAt).toLocaleDateString()}</span> 
     </div>
   </div>
 );
@@ -115,5 +115,6 @@ function Posts() {
     </div>
   );
 }
+
 
 export default Posts;
