@@ -14,7 +14,7 @@ import Post from './store/PostContaxt'
 // import { auth } from './firebase';
 
 
-function App() {
+function App()  {
 
   const {user,setUser} = useContext(AuthContext)
   const {auth} = useContext(FirebaseContext)
